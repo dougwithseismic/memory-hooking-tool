@@ -930,7 +930,21 @@ const memHook = createMemoryHooking();
 
 ## License
 
-MIT License - see LICENSE file for details.
+**GNU General Public License v3.0 (GPL-3.0)**
+
+This project is licensed under the GPL v3.0 to ensure that any derivatives or modifications remain open source and benefit the community. This prevents commercial rip-offs while allowing legitimate open source development.
+
+**What this means:**
+
+- ✅ **Use freely** for personal, educational, and open source projects
+- ✅ **Modify and distribute** as long as you keep it open source under GPL
+- ✅ **Commercial use** allowed if your entire project is also GPL licensed
+- ❌ **No proprietary/closed-source** derivatives without commercial licensing
+
+**Commercial Licensing:**
+For proprietary or commercial use, contact: <doug@withseismic.com>
+
+See the [LICENSE](LICENSE) file for full details or visit [gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ## Disclaimer
 
