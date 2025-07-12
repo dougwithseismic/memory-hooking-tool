@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "memory-automation": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "cwd": "/mnt/e/WEB_PROJECTS/_CLIENTS/WITHSEISMIC/memory-hooking-tool/mcp-server"
+    }
+  }
+}
