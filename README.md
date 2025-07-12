@@ -8,6 +8,8 @@
 
 A powerful C++ memory hooking and manipulation tool with a TypeScript scripting interface for reverse engineering, game hacking, process analysis, and complete PC automation. Combines advanced memory manipulation with comprehensive automation capabilities including mouse control, keyboard input, screenshot capture, window management, and visual automation. The aim here is to create a set of tools that LLMs can use to control machines and be fully autonomous in their nature.
 
+<video controls src="memory-hooking.mp4" title="Title"></video>
+
 **Step One: Star the Repo. It means more than you think!**
 
 ## Features
