@@ -1,16 +1,14 @@
 # Memory Hooking Tool - C++ with TypeScript Scripting
 
-> **"Hi, this is Doug. This project is more blackhat than you'll be used to seeing me put out, but hear me out. While everyone else is building automated browsers, I'm taking a different approach: giving LLMs complete control over the entire computer — including direct memory access and editing capabilities. I know it sounds crazy, but imagine the possibilities when AI can manipulate not just web pages, but running processes, game states, and system memory itself. This is just the beginning — expect to see an MCP server and agent tooling shortly afterwards!"**
+https://github.com/user-attachments/assets/045fffa8-f265-427c-b905-403fba1c2d43
+
+> **"Hi, this is Doug. This project is more blackhat than you'll be used to seeing me put out but... While everyone else is building automated browsers, I'm taking a different approach: giving LLMs complete control over the entire computer — including direct memory access and editing capabilities. I know it sounds kinda dumb, but imagine the possibilities when AI can manipulate not just web pages, but running processes, game states, and system memory itself. Expect to see an MCP server and agent tooling shortly afterwards"**
 >
 > *-Be responsible.*
 >
 > *— Doug - withseismic.com*
 
 A powerful C++ memory hooking and manipulation tool with a TypeScript scripting interface for reverse engineering, game hacking, process analysis, and complete PC automation. Combines advanced memory manipulation with comprehensive automation capabilities including mouse control, keyboard input, screenshot capture, window management, and visual automation. The aim here is to create a set of tools that LLMs can use to control machines and be fully autonomous in their nature.
-
-<video controls src="memory-hooking.mp4" title="Title"></video>
-
-**Step One: Star the Repo. It means more than you think!**
 
 ## Features
 
