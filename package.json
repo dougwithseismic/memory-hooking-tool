@@ -1,0 +1,37 @@
+{
+  "author": "Experiments Team",
+  "dependencies": {
+    "@types/node": "^20.0.0",
+    "node-addon-api": "^7.0.0",
+    "typescript": "^5.0.0"
+  },
+  "description": "C++ Memory Hooking Tool with TypeScript Scripting",
+  "devDependencies": {
+    "node-gyp": "^11.2.0"
+  },
+  "gypfile": true,
+  "keywords": [
+    "memory",
+    "hooking",
+    "reverse-engineering",
+    "cpp",
+    "typescript",
+    "process-injection"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "@experiments/demo",
+  "scripts": {
+    "build": "npm run build:native && npm run build:ts",
+    "build:native": "node-gyp rebuild",
+    "build:ts": "tsc",
+    "dev": "npm run build && node dist/index.js",
+    "install": "node-gyp rebuild",
+    "test": "node dist/examples/test-basic.js",
+    "test:advanced": "node dist/examples/advanced-memory-manipulation.js",
+    "test:automation": "node dist/examples/automation-demo.js",
+    "test:helpers": "node dist/examples/memory-helpers-demo.js",
+    "test:safe": "node dist/examples/safe-operations-demo.js"
+  },
+  "version": "1.0.0"
+}
