@@ -107,7 +107,9 @@ export class MemoryHooking implements IMemoryHooking {
 
       if (!success) {
         const error = new MemoryHookingError(
-          `Failed to write ${data.length} bytes to address ${address.toString(16)}`,
+          `Failed to write ${data.length} bytes to address ${address.toString(
+            16
+          )}`,
           MemoryHookingErrorCode.WriteMemoryFailed,
           undefined,
           "safeWriteMemory"
@@ -958,11 +960,19 @@ export class MemoryHooking implements IMemoryHooking {
   }
 
   clickMouse(button: MouseButton, x?: number, y?: number): boolean {
-    return this.nativeInstance.clickMouse(Number(button), x, y);
+    if (x !== undefined && y !== undefined) {
+      return this.nativeInstance.clickMouse(Number(button), x, y);
+    } else {
+      return this.nativeInstance.clickMouse(Number(button));
+    }
   }
 
   doubleClickMouse(button: MouseButton, x?: number, y?: number): boolean {
-    return this.nativeInstance.doubleClickMouse(Number(button), x, y);
+    if (x !== undefined && y !== undefined) {
+      return this.nativeInstance.doubleClickMouse(Number(button), x, y);
+    } else {
+      return this.nativeInstance.doubleClickMouse(Number(button));
+    }
   }
 
   dragMouse(
@@ -1074,7 +1084,11 @@ export class MemoryHooking implements IMemoryHooking {
   }
 
   showWindow(hwnd: number, showCommand?: number): boolean {
-    return this.nativeInstance.showWindow(hwnd, showCommand);
+    if (showCommand !== undefined) {
+      return this.nativeInstance.showWindow(hwnd, showCommand);
+    } else {
+      return this.nativeInstance.showWindow(hwnd);
+    }
   }
 
   moveWindow(
@@ -1131,7 +1145,11 @@ export class MemoryHooking implements IMemoryHooking {
     color: number,
     tolerance?: number
   ): Array<{ x: number; y: number }> {
-    return this.nativeInstance.findColorOnScreen(color, tolerance);
+    if (tolerance !== undefined) {
+      return this.nativeInstance.findColorOnScreen(color, tolerance);
+    } else {
+      return this.nativeInstance.findColorOnScreen(color);
+    }
   }
 
   findColorInRegion(
@@ -1142,14 +1160,18 @@ export class MemoryHooking implements IMemoryHooking {
     height: number,
     tolerance?: number
   ): Array<{ x: number; y: number }> {
-    return this.nativeInstance.findColorInRegion(
-      color,
-      x,
-      y,
-      width,
-      height,
-      tolerance
-    );
+    if (tolerance !== undefined) {
+      return this.nativeInstance.findColorInRegion(
+        color,
+        x,
+        y,
+        width,
+        height,
+        tolerance
+      );
+    } else {
+      return this.nativeInstance.findColorInRegion(color, x, y, width, height);
+    }
   }
 
   // Automation Helpers - Wait and Timing
@@ -1158,7 +1180,11 @@ export class MemoryHooking implements IMemoryHooking {
   }
 
   waitForWindow(titlePattern: string, timeoutMs?: number): boolean {
-    return this.nativeInstance.waitForWindow(titlePattern, timeoutMs);
+    if (timeoutMs !== undefined) {
+      return this.nativeInstance.waitForWindow(titlePattern, timeoutMs);
+    } else {
+      return this.nativeInstance.waitForWindow(titlePattern);
+    }
   }
 
   waitForPixelColor(
@@ -1168,17 +1194,27 @@ export class MemoryHooking implements IMemoryHooking {
     timeoutMs?: number,
     tolerance?: number
   ): boolean {
-    return this.nativeInstance.waitForPixelColor(
-      x,
-      y,
-      color,
-      timeoutMs,
-      tolerance
-    );
+    if (timeoutMs !== undefined && tolerance !== undefined) {
+      return this.nativeInstance.waitForPixelColor(
+        x,
+        y,
+        color,
+        timeoutMs,
+        tolerance
+      );
+    } else if (timeoutMs !== undefined) {
+      return this.nativeInstance.waitForPixelColor(x, y, color, timeoutMs);
+    } else {
+      return this.nativeInstance.waitForPixelColor(x, y, color);
+    }
   }
 
   waitForKeyPress(key: KeyCode, timeoutMs?: number): boolean {
-    return this.nativeInstance.waitForKeyPress(Number(key), timeoutMs);
+    if (timeoutMs !== undefined) {
+      return this.nativeInstance.waitForKeyPress(Number(key), timeoutMs);
+    } else {
+      return this.nativeInstance.waitForKeyPress(Number(key));
+    }
   }
 
   // Automation Helpers - System Information
@@ -1195,7 +1231,11 @@ export class MemoryHooking implements IMemoryHooking {
   }
 
   isUserIdle(idleTimeMs?: number): boolean {
-    return this.nativeInstance.isUserIdle(idleTimeMs);
+    if (idleTimeMs !== undefined) {
+      return this.nativeInstance.isUserIdle(idleTimeMs);
+    } else {
+      return this.nativeInstance.isUserIdle();
+    }
   }
 }
 

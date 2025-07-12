@@ -31,7 +31,9 @@
     "test:advanced": "node dist/examples/advanced-memory-manipulation.js",
     "test:automation": "node dist/examples/automation-demo.js",
     "test:helpers": "node dist/examples/memory-helpers-demo.js",
-    "test:safe": "node dist/examples/safe-operations-demo.js"
+    "test:safe": "node dist/examples/safe-operations-demo.js",
+    "demo:flashy": "npm run build:ts && node dist/examples/flashy-demo.js",
+    "demo:mouse": "npm run build:ts && node dist/examples/insane-mouse-demo.js"
   },
   "version": "1.0.0"
 }

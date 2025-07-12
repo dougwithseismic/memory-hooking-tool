@@ -6,7 +6,9 @@
 >
 > *— Doug - withseismic.com*
 
-A powerful C++ memory hooking and manipulation tool with a TypeScript scripting interface for reverse engineering, game hacking, process analysis, and complete PC automation. Combines advanced memory manipulation with comprehensive automation capabilities including mouse control, keyboard input, screenshot capture, window management, and visual automation.
+A powerful C++ memory hooking and manipulation tool with a TypeScript scripting interface for reverse engineering, game hacking, process analysis, and complete PC automation. Combines advanced memory manipulation with comprehensive automation capabilities including mouse control, keyboard input, screenshot capture, window management, and visual automation. The aim here is to create a set of tools that LLMs can use to control machines and be fully autonomous in their nature.
+
+**Step One: Star the Repo. It means more than you think!**
 
 ## Features
 
@@ -41,6 +43,12 @@ A powerful C++ memory hooking and manipulation tool with a TypeScript scripting 
 - **Visual Automation**: Color-based automation and pattern detection
 
 > 📖 **Detailed Automation Documentation**: For comprehensive automation features, examples, and advanced use cases, see [AUTOMATION_FEATURES.md](AUTOMATION_FEATURES.md)
+
+## Demo Video
+
+![Memory Hooking Tool Demo](memory-hooking.mp4)
+
+*Watch the memory hooking tool in action - demonstrating process attachment, memory manipulation, and automation capabilities.*
 
 ## Architecture
 

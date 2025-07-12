@@ -146,7 +146,9 @@ export const examples = {
     console.log("\n=== Running Processes ===");
     processes.forEach((proc) => {
       console.log(
-        `PID: ${proc.processId.toString().padStart(6)} | Name: ${proc.processName}`
+        `PID: ${proc.processId.toString().padStart(6)} | Name: ${
+          proc.processName
+        }`
       );
     });
 
@@ -181,13 +183,6 @@ export const examples = {
   },
 };
 
-// Export minesweeper automation
-export {
-  MinesweeperAutomation,
-  minesweeperDemo,
-} from "./examples/minesweeper-automation";
-export { runMinesweeperTest } from "./examples/test-minesweeper";
-
 // Console helper for interactive use
 if (require.main === module) {
   console.log("Memory Hooking Tool - TypeScript Interface");
@@ -199,17 +194,10 @@ if (require.main === module) {
   console.log("- utils: Utility functions");
   console.log("- processes: Process management helpers");
   console.log("- examples: Example usage functions");
-  console.log("- MinesweeperAutomation: Minesweeper bot class");
-  console.log("- minesweeperDemo(): Run minesweeper automation demo");
-  console.log("- runMinesweeperTest(): Quick minesweeper test");
   console.log("");
   console.log("Quick start:");
   console.log("const memHook = createMemoryHooking();");
   console.log("memHook.getRunningProcesses();");
-  console.log("");
-  console.log("Minesweeper automation:");
-  console.log("import { minesweeperDemo } from '@experiments/demo';");
-  console.log("await minesweeperDemo();");
   console.log("");
 
   // Run a basic example
